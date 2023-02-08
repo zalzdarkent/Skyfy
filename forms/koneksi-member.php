@@ -8,7 +8,7 @@ $apakah = $_POST['check'];
 mysqli_query($koneksi, "INSERT INTO report values ('', '$name', '$masalah', '$apakah')");
 
 if ($koneksi) {
-    header("location: popup-report.html");
+    header("location: ../popup-report.html");
 }
 
 ?>
