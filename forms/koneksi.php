@@ -19,5 +19,5 @@ if (!isset($persetujuan)) {
 mysqli_query($koneksi, "INSERT INTO member values ('', '$name', '$asal_kota', '$umur', '$jenis_kelamin', '$tier', '$no_hp', '$persetujuan')");
 
 if ($koneksi) {
-    header("location: popup.html");
+    header("location: ../popup.html");
 }
