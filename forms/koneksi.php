@@ -10,10 +10,19 @@ $no_hp = $_POST['hp'];
 $persetujuan = $_POST['agreement'];
 
 if (empty($persetujuan)) {
-    echo "<script> alert('Anda belum memberikan persetujuan'); window.history.back(); </script>";
+    echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@9'></script>
+          <script>
+            Swal.fire({
+              title: 'Peringatan!',
+              text: 'Anda belum memberikan persetujuan',
+              icon: 'warning',
+              confirmButtonText: 'Ok'
+            }).then(function() {
+              window.history.back();
+            });
+          </script>";
     exit();
 }
-
 // $query = "INSERT INTO form values ($nama_lengkap, $umur, $jenis_kelamin, $asal_kota, $alasan_masuk)";
 mysqli_query($koneksi, "INSERT INTO member values ('', '$name', '$asal_kota', '$umur', '$jenis_kelamin', '$tier', '$no_hp', '$persetujuan')");
 
