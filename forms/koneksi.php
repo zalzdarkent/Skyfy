@@ -9,6 +9,11 @@ $tier = $_POST['tier'];
 $no_hp = $_POST['hp'];
 $persetujuan = $_POST['agreement'];
 
+if (empty($persetujuan)) {
+    echo "<script> alert('Anda belum memberikan persetujuan'); window.history.back(); </script>";
+    exit();
+}
+
 // $query = "INSERT INTO form values ($nama_lengkap, $umur, $jenis_kelamin, $asal_kota, $alasan_masuk)";
 mysqli_query($koneksi, "INSERT INTO member values ('', '$name', '$asal_kota', '$umur', '$jenis_kelamin', '$tier', '$no_hp', '$persetujuan')");
 
