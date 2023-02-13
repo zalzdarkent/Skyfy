@@ -83,11 +83,6 @@ li {
   list-style: none;
 }
 
-html::selection {
-  color: var(--white);
-  background-color: rgb(50, 119, 215);
-}
-
 a,
 img,
 span,
