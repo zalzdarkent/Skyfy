@@ -83,6 +83,11 @@ li {
   list-style: none;
 }
 
+html::selection {
+  color: var(--white);
+  background-color: rgb(50, 119, 215);
+}
+
 a,
 img,
 span,
@@ -335,7 +340,7 @@ body.nav-active {
 }
 
 /*-----------------------------------*\
-  #PRELOADER
+  #PRELOADER 1
 \*-----------------------------------*/
 
 .preloader {
@@ -582,7 +587,7 @@ body.nav-active {
   transition: var(--transition-2);
 }
 
-.service-card .card-icon .bi {
+.service-card .card-icon ion-icon{
   color: var(--content-color, var(--raisin-black));
   font-size: 6rem;
   --ionicon-stroke-width: 15px;
