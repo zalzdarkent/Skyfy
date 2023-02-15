@@ -65,3 +65,19 @@
 </body>
 
 </html>
+<script src='https://cdn.jsdelivr.net/npm/sweetalert2@9'></script>
+<script>
+  const form = document.querySelector('form');
+  const agreementCheck = document.querySelector('#agreement-check');
+
+  form.addEventListener('submit', (event) => {
+    if (!agreementCheck.checked) {
+      event.preventDefault();
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Anda harus menyetujui peraturan yang ada!'
+      });
+    }
+  });
+</script>
